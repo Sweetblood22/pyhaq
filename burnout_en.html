@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Burnout Checklist</title>
+<link  rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap">
+<link  rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap">
+<style>
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  width: 100%;
+  height: fit-content;
+}
+
+body{
+  background-color: white;
+  width: 100%;
+  padding-top: 20px;
+}
+
+h2, h4 {
+      font-family: "Playfair Display", Arial, sans-serif;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+h2 span {
+        font-size: 12px;
+    }
+
+.content{
+    width: 95%;
+    display: block;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  margin: auto;
+  padding-bottom: 20px;
+}
+
+.left {
+  width: 50%;
+}
+
+.right {
+  width: 50%;
+}
+
+.checklist_item {
+    width: 95%;
+    display: flex;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+
+.bg {
+  background-color: #ffffff;
+  padding: 8px;
+  border-radius: 6px;
+  margin: 2px -1.25% 2px 5%;
+}
+
+.toggle:checked + .bg {
+  background-color: #ffc8c8;
+}
+
+label {
+    font-family: "Maven Pro";
+}
+
+p {
+    font-family: "Maven Pro";
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+  width: 100%;
+  display: block;
+  margin: auto;
+  padding-bottom: 20px;
+}
+  .left {
+    float: none;
+    width: 100%;
+  }
+
+  .right {
+    float: none;
+    width: 100%;
+  }
+
+.bg{
+  background-color: #ffffff;
+  padding: 8px;
+  border-radius: 6px;
+  margin: 2px -1.25% 2px 5%;
+}
+
+}
+</style>
+</head>
+<body>
+    
+  <h2>Burnout Checklist <a href="https://www.re-mindpsychology.com/assessments/burnout_ko"><span>한국어</span></a></h2>
+  <h4><a href="https://www.re-mindpsychology.com/assessments/phq9_en"><span>PHQ-9</span></a> / <a href="https://www.re-mindpsychology.com/assessments/gad7_en"><span>GAD-7</span></a></h4>
+
+<div class="content">
+    <p>Review this checklist to quickly assess how many symptoms of burnout you are currently experiencing.</p>
+</div>
+<div>
+<form>
+<div class="wrapper">
+<div class="left">
+<div class="checklist_item">
+<input type="checkbox" name="feeling_drained_and_depleted" id="feeling_drained_and_depleted" class="toggle"/><div class="bg">
+<label for="feeling_drained_and_depleted">Feeling drained and depleted</label></div>
+</div>
+<div class="checklist_item">
+<input type="checkbox" name="chronic_fatigue" id="chronic_fatigue" class="toggle"/><div class="bg">
+<label for="chronic_fatigue">Chronic fatigue</label></div>
+</div>
+<div class="checklist_item">
+<input type="checkbox" name="insomnia_or_disrupted_sleep" id="insomnia_or_disrupted_sleep" class="toggle"/><div class="bg">
+<label for="insomnia_or_disrupted_sleep">Insomnia or disrupted sleep</label></div>
+</div>
+<div class="checklist_item">
+<input type="checkbox" name="ignoring_personal_needs_like_nutrition_exercise_or_relaxation" id="ignoring_personal_needs_like_nutrition_exercise_or_relaxation" class="toggle"/><div class="bg">
+<label for="ignoring_personal_needs_like_nutrition_exercise_or_relaxation">Ignoring personal needs like nutrition, exercise, or relaxation</label></div>
+</div>
+<div class="checklist_item">
+<input type="checkbox" name="using_food_excessive_screen_time_alcohol_or_other_substances_to_feel_better" id="using_food_excessive_screen_time_alcohol_or_other_substances_to_feel_better" class="toggle"/><div class="bg">
+<label for="using_food_excessive_screen_time_alcohol_or_other_substances_to_feel_better">Using food, excessive screen time, alcohol, or other substances to feel better</label></div>
+</div>
+<div class="checklist_item">
+<input type="checkbox" name="feeling_disconnected_from_people_close_to_you" id="feeling_disconnected_from_people_close_to_you" class="toggle"/><div class="bg">
+<label for="feeling_disconnected_from_people_close_to_you">Feeling disconnected from people close to you</label></div>
+</div>
+<div class="checklist_item">
+<input type="checkbox" name="skeptical_of_positive_outcomes_in_work_or_life" id="skeptical_of_positive_outcomes_in_work_or_life" class="toggle"/><div class="bg">
+<label for="skeptical_of_positive_outcomes_in_work_or_life">Skeptical of positive outcomes in work or life</label></div>
+</div>
+<div class="checklist_item">
+<input type="checkbox" name="decline_in_productivity_and_effectiveness" id="decline_in_productivity_and_effectiveness" class="toggle"/><div class="bg">
+<label for="decline_in_productivity_and_effectiveness">Decline in productivity and effectiveness</label></div>
+</div>
+<div class="checklist_item">
+<input type="checkbox" name="difficulty_concentrating_or_staying_focused_on_tasks" id="difficulty_concentrating_or_staying_focused_on_tasks" class="toggle"/><div class="bg">
+<label for="difficulty_concentrating_or_staying_focused_on_tasks">Difficulty concentrating or staying focused on tasks</label></div>
+</div>
+<div class="checklist_item">
+<input type="checkbox" name="increased_errors_or_mistakes" id="increased_errors_or_mistakes" class="toggle"/><div class="bg">
+<label for="increased_errors_or_mistakes">Increased errors or mistakes</label></div>
+</div></div>
+<div class="right">
+<div class="checklist_item">
+<input type="checkbox" name="avoiding_or_putting_off_tasks_and_responsibilities" id="avoiding_or_putting_off_tasks_and_responsibilities" class="toggle"/><div class="bg">
+<label for="avoiding_or_putting_off_tasks_and_responsibilities">Avoiding or putting off tasks and responsibilities</label></div>
+</div>
+<div class="checklist_item">
+<input type="checkbox" name="feeling_unfulfilled_despite_your_acheivements" id="feeling_unfulfilled_despite_your_acheivements" class="toggle"/><div class="bg">
+<label for="feeling_unfulfilled_despite_your_acheivements">Feeling unfulfilled despite your acheivements</label></div>
+</div>
+<div class="checklist_item">
+<input type="checkbox" name="loss_of_motivation_and_enthusiasm" id="loss_of_motivation_and_enthusiasm" class="toggle"/><div class="bg">
+<label for="loss_of_motivation_and_enthusiasm">Loss of motivation and enthusiasm</label></div>
+</div>
+<div class="checklist_item">
+<input type="checkbox" name="doubting_the_value_or_purporse_of_your_work" id="doubting_the_value_or_purporse_of_your_work" class="toggle"/><div class="bg">
+<label for="doubting_the_value_or_purporse_of_your_work">Doubting the value or purporse of your work</label></div>
+</div>
+<div class="checklist_item">
+<input type="checkbox" name="shortened_temper" id="shortened_temper" class="toggle"/><div class="bg">
+<label for="shortened_temper">Shortened temper</label></div>
+</div>
+<div class="checklist_item">
+<input type="checkbox" name="get_angry_with_colleagues_friends_and_family_more_easily" id="get_angry_with_colleagues_friends_and_family_more_easily" class="toggle"/><div class="bg">
+<label for="get_angry_with_colleagues_friends_and_family_more_easily">Get angry with colleagues, friends, and family more easily</label></div>
+</div>
+<div class="checklist_item">
+<input type="checkbox" name="you_find_it_difficult_to_empathize_with_others" id="you_find_it_difficult_to_empathize_with_others" class="toggle"/><div class="bg">
+<label for="you_find_it_difficult_to_empathize_with_others">You find it difficult to empathize with others</label></div>
+</div>
+<div class="checklist_item">
+<input type="checkbox" name="headaches_or_digestion_problems" id="headaches_or_digestion_problems" class="toggle"/><div class="bg">
+<label for="headaches_or_digestion_problems">Headaches or digestion problems</label></div>
+</div>
+<div class="checklist_item">
+<input type="checkbox" name="disillusioned_with_work_or_life" id="disillusioned_with_work_or_life" class="toggle"/><div class="bg">
+<label for="disillusioned_with_work_or_life">Disillusioned with work or life</label></div>
+</div>
+<div class="checklist_item">
+<input type="checkbox" name="more_frequent_fights_or_arguments" id="more_frequent_fights_or_arguments" class="toggle"/><div class="bg">
+<label for="more_frequent_fights_or_arguments">More frequent fights or arguments</label></div>
+</div>
+</div>
+</div>
+</form>
+</div>
+<div class="content">
+    <p>If you selected 6 or more you might be suffering from burnout, which may be causing extra stress in your life.</p>
+</div>
+<div class="content">
+    <p>Discover how therapy at re-MIND Psychology can help with burnout and stress.</p>
+</div>
+
+<div style='display:block;margin:auto;margin-top:2px;margin-bottom:2px;width:75%;padding-bottom:20px;'>
+    <a style='color:#000000;font-style:normal;text-decoration:none' href=https://drbaik.clientsecure.me/request/service>
+     <div style='display:block;padding:16px;border-radius:12px;box-shadow:5px 5px 5px #ad7d7d;background-color:#ffc8c8;text-align:center;justify-content:center;font-size:150%;overflow:auto'>
+      <p style='font-family:"Playfair Display";margin:0px'>Schedule <span style="white-space: nowrap;">Free 15 min</span><br>Consultation Now</p>
+     </div>
+    </a>
+    </div>
+   </body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link  rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap">
+<link  rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap">
+<style>
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: white;
+  max-width: 1280px;
+}
+
+.content{
+    width: 95%;
+    display: block;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  margin: auto;
+  padding-bottom: 20px;
+}
+
+.left {
+  width: 50%;
+}
+
+.right {
+  width: 50%;
+}
+
+.checklist_item {
+    width: 95%;
+    display: flex;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+
+.bg{
+  background-color: #ffffff;
+  padding: 8px;
+  border-radius: 6px;
+  margin: 2px -1.25% 2px 5%;
+}
+
+.toggle:checked + .bg{
+  background-color: #ffc8c8;
+}
+
+label{
+    font-family: "Maven Pro"
+}
+
+p{
+    font-family: "Maven Pro"
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+  width: 100%;
+  display: block;
+  margin: auto;
+  padding-bottom: 20px;
+}
+  .left {
+    float: none;
+    width: 100%;
+  }
+
+  .right {
+    float: none;
+    width: 100%;
+  }
+
+.bg{
+  background-color: #ffffff;
+  padding: 8px;
+  border-radius: 6px;
+  margin: 2px -1.25% 2px 5%;
+}
+
+}
+</style>
+</head>
+<body>
+<div class="content">
+    <p>Review this checklist to quickly assess how many symptoms of burnout you are currently experiencing.</p>
+</div>
+<div>
+<form>
+<div class="wrapper">
+<div class="left">
+<div class="checklist_item">
+<input type="checkbox" name="feeling_drained_and_depleted" id="a1" class="toggle" onclick="calculateScore()"/><div class="bg">
+<label for="feeling_drained_and_depleted">Feeling drained and depleted</label></div>
+</div>
+<div class="checklist_item">
+<input type="checkbox" name="chronic_fatigue" id="a2" class="toggle" onclick="calculateScore()"/><div class="bg">
+<label for="chronic_fatigue">Chronic fatigue</label></div>
+</div>
+<div class="checklist_item">
+<input type="checkbox" name="insomnia_or_disrupted_sleep" id="a3" class="toggle" onclick="calculateScore()"/><div class="bg">
+<label for="insomnia_or_disrupted_sleep">Insomnia or disrupted sleep</label></div>
+</div>
+<div class="checklist_item">
+<input type="checkbox" name="ignoring_personal_needs_like_nutrition_exercise_or_relaxation" id="a4" class="toggle" onclick="calculateScore()"/><div class="bg">
+<label for="ignoring_personal_needs_like_nutrition_exercise_or_relaxation">Ignoring personal needs like nutrition, exercise, or relaxation</label></div>
+</div>
+<div class="checklist_item">
+<input type="checkbox" name="using_food_excessive_screen_time_alcohol_or_other_substances_to_feel_better" id="a5" class="toggle" onclick="calculateScore()"/><div class="bg">
+<label for="using_food_excessive_screen_time_alcohol_or_other_substances_to_feel_better">Using food, excessive screen time, alcohol, or other substances to feel better</label></div>
+</div>
+<div class="checklist_item">
+<input type="checkbox" name="feeling_disconnected_from_people_close_to_you" id="a6" class="toggle" onclick="calculateScore()"/><div class="bg">
+<label for="feeling_disconnected_from_people_close_to_you">Feeling disconnected from people close to you</label></div>
+</div>
+<div class="checklist_item">
+<input type="checkbox" name="skeptical_of_positive_outcomes_in_work_or_life" id="a7" class="toggle" onclick="calculateScore()"/><div class="bg">
+<label for="skeptical_of_positive_outcomes_in_work_or_life">Skeptical of positive outcomes in work or life</label></div>
+</div>
+<div class="checklist_item">
+<input type="checkbox" name="decline_in_productivity_and_effectiveness" id="a8" class="toggle" onclick="calculateScore()"/><div class="bg">
+<label for="decline_in_productivity_and_effectiveness">Decline in productivity and effectiveness</label></div>
+</div>
+<div class="checklist_item">
+<input type="checkbox" name="difficulty_concentrating_or_staying_focused_on_tasks" id="a9" class="toggle" onclick="calculateScore()"/><div class="bg">
+<label for="difficulty_concentrating_or_staying_focused_on_tasks">Difficulty concentrating or staying focused on tasks</label></div>
+</div>
+<div class="checklist_item">
+<input type="checkbox" name="increased_errors_or_mistakes" id="a10" class="toggle" onclick="calculateScore()"/><div class="bg">
+<label for="increased_errors_or_mistakes">Increased errors or mistakes</label></div>
+</div></div>
+<div class="right">
+<div class="checklist_item">
+<input type="checkbox" name="avoiding_or_putting_off_tasks_and_responsibilities" id="a11" class="toggle" onclick="calculateScore()"/><div class="bg">
+<label for="avoiding_or_putting_off_tasks_and_responsibilities">Avoiding or putting off tasks and responsibilities</label></div>
+</div>
+<div class="checklist_item">
+<input type="checkbox" name="feeling_unfulfilled_despite_your_acheivements" id="a12" class="toggle" onclick="calculateScore()"/><div class="bg">
+<label for="feeling_unfulfilled_despite_your_acheivements">Feeling unfulfilled despite your acheivements</label></div>
+</div>
+<div class="checklist_item">
+<input type="checkbox" name="loss_of_motivation_and_enthusiasm" id="a13" class="toggle" onclick="calculateScore()"/><div class="bg">
+<label for="loss_of_motivation_and_enthusiasm">Loss of motivation and enthusiasm</label></div>
+</div>
+<div class="checklist_item">
+<input type="checkbox" name="doubting_the_value_or_purporse_of_your_work" id="a14" class="toggle" onclick="calculateScore()"/><div class="bg">
+<label for="doubting_the_value_or_purporse_of_your_work">Doubting the value or purporse of your work</label></div>
+</div>
+<div class="checklist_item">
+<input type="checkbox" name="shortened_temper" id="a15" class="toggle" onclick="calculateScore()"/><div class="bg">
+<label for="shortened_temper">Shortened temper</label></div>
+</div>
+<div class="checklist_item">
+<input type="checkbox" name="get_angry_with_colleagues_friends_and_family_more_easily" id="a16" class="toggle" onclick="calculateScore()"/><div class="bg">
+<label for="get_angry_with_colleagues_friends_and_family_more_easily">Get angry with colleagues, friends, and family more easily</label></div>
+</div>
+<div class="checklist_item">
+<input type="checkbox" name="you_find_it_difficult_to_empathize_with_others" id="a17" class="toggle" onclick="calculateScore()"/><div class="bg">
+<label for="you_find_it_difficult_to_empathize_with_others">You find it difficult to empathize with others</label></div>
+</div>
+<div class="checklist_item">
+<input type="checkbox" name="headaches_or_digestion_problems" id="a18" class="toggle" onclick="calculateScore()"/><div class="bg">
+<label for="headaches_or_digestion_problems">Headaches or digestion problems</label></div>
+</div>
+<div class="checklist_item">
+<input type="checkbox" name="disillusioned_with_work_or_life" id="a19" class="toggle" onclick="calculateScore()"/><div class="bg">
+<label for="disillusioned_with_work_or_life">Disillusioned with work or life</label></div>
+</div>
+<div class="checklist_item">
+<input type="checkbox" name="more_frequent_fights_or_arguments" id="a20" class="toggle" onclick="calculateScore()"/><div class="bg">
+<label for="more_frequent_fights_or_arguments">More frequent fights or arguments</label></div>
+</div>
+</div>
+</div>
+</form>
+
+<div class="content"><p id="result"></p></div>
+
+<script>
+  function calculateScore() {
+    let totalScore = 0;
+
+    // Loop through the 20 items
+    for (let i = 1; i <= 20; i++) {
+      const item = document.getElementById('a' + i);
+      if (item.checked) {
+          totalScore += 1;
+        }
+      }
+    document.getElementById('result').textContent = "You have identified " + totalScore + " symptoms.";
+  }
+</script>
+
+
+</div>
+<div class="content">
+    <p>If you selected 6 or more you might be suffering from burnout, which may be causing extra stress in your life.</p>
+</div>
+<div class="content">
+    <p>Discover how therapy at re-MIND Psychology can help with burnout and stress.</p>
+</div>
+
+
+
+<a style='color:#000000;font-style:normal;text-decoration:none' href=https://drbaik.clientsecure.me/request/service>
+    <div style='display:block;margin:auto;margin-top:2px;margin-bottom:2px;width:75%;padding-bottom:20px;'>
+     <div style='display:block;padding:16px;border-radius:12px;box-shadow:5px 5px 5px #ad7d7d;background-color:#ffc8c8;text-align:center;justify-content:center;font-size:150%;overflow:auto'>
+      <p style='font-family:"Playfair Display";margin:0px'>Schedule <span style="white-space: nowrap;">Free 15 min</span><br>Consultation Now</p>
+     </div>
+    </a>
+   </body>
+</html>

@@ -1,0 +1,31 @@
+type: questionnaire
+title: GAD-7
+header: Over the last 2 weeks, how often have you been bothered by any of the following problems?
+answer-set:
+  labels:
+    - Not at all
+    - Several Days
+    - More than half the days
+    - Nearly every day
+  values:
+    - 0
+    - 1
+    - 2
+    - 3
+questions:
+  - Feeling nervous, anxious, or on edge
+  - Not being able to stop or control worrying
+  - Worrying too much about different things
+  - Trouble relaxing
+  - Being so restless that it is hard to sit still
+  - Becoming easily annoyed or irritable
+  - Feeling afraid, as if something awful might 
+result:
+  header: "Scores within the following ranges indicate the respective provisional diagnosis:"
+  show: on-submit
+  style: threshold
+  values:
+    4: minimal anxiety
+    9: mild anxiety
+    14: moderate anxiety
+    inf: severe anxiety

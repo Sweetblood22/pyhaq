@@ -1,0 +1,11 @@
+style: quiz
+title: State Capitals
+questions:
+  - text: What is the capital of Texas?
+    choices: 
+      wrong: [Dallas, Houston, San Antonio]
+      correct: Austin
+  - text: What is the capital of Kansas?
+    choices: 
+      wrong: [Wichita, Salina, Kansas City]
+      correct: Topeka

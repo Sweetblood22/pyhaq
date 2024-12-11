@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question and Answers</title>
+    <link  rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap">
+    <link  rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap">
+    <style id="css-style">
+    
+    body {
+        font-family: "Maven Pro";
+    }
+    .quiz-title {
+        font-family: "Playfair Display", Arial, sans-serif;
+        width: 100%;
+        font-size: 1.75em;
+        text-align: center;
+        margin-bottom: .2em;
+    }
+    .quiz-arrange {
+        display: flex;
+        flex-direction: column;
+    }
+    .quiz-summary {
+        font-size: 1.25em;
+        text-align: center;
+        flex: 1;
+        width: 100%;
+    }
+    .questions {
+        display: block;
+        flex: 1;
+        margin: 5px;
+        width: 100%;
+    }
+    .question-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .question {
+        font-size: 1.5rem;
+        margin-top: auto;
+        margin-bottom: auto;
+        padding-left: 20px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        flex: 1;
+        min-width: 400px;
+    }
+    .answer-container {
+        font-size: 1.2rem;
+        display: flex;
+        flex: 1;
+        flex-wrap: wrap;
+        min-width: 400px;
+    }
+    .answer {
+        padding: 10px;
+        margin: 2.5px;
+        background-color: #f0f0f0;
+        cursor: pointer;
+        flex: 1;
+        transition: background-color 0.3s ease;
+        text-align: center;
+    }
+    .answer:hover {
+        background-color: #d0d0d0;
+    }
+    .answer.selected {
+        background-color: #4caf50;
+        color: white;
+    }
+
+    @media only screen and (min-aspect-ratio: 7/6) {
+    body {
+        background-color: lightblue;
+    }
+    .quiz-summary {
+        font-size: 1.25em;
+        text-align: center;
+        flex: 1;
+        max-width: 10%;
+    }
+    .questions {
+        width: 90%;
+    }
+    .quiz-arrange {
+        flex-direction: row;
+    }
+    }
+    </style>
+    <script>
+        function createCSSMap(cssString) {
+        const cssMap = new Map();
+
+        // Split the string into individual rules
+        const rules = cssString.split('}');
+
+        for (const rule of rules) {
+            if (rule.trim()) {
+            const [selector, declarations] = rule.split('{');
+
+            // Create a map for the declarations
+            const declarationMap = new Map();
+            declarations.split(';').forEach(declaration => {
+                if (declaration.trim()) {
+                const [property, value] = declaration.trim().split(':');
+                declarationMap.set(property.trim(), value.trim());
+                }
+            });
+
+            // Add the selector and its declarations to the main map
+            cssMap.set(selector.trim(), declarationMap);
+            }
+        }
+
+        return cssMap;
+        }
+        
+        // let cssMap = createCSSMap(document.getElementById("css").innerText);
+
+        function mapToText(map) {
+            let text = "";
+            map.forEach (function(style, key) {
+                text += '    ' + key + ' {\n'
+                style.forEach (function(value, attr) {
+                    text += '        ' + attr + ': ' + value + ';\n'
+                });
+                text += '    }\n'
+            });
+            return text;
+        }
+
+        function layoutByScreenRatio() {
+            let cssLayoutMap = createCSSMap(document.getElementById('css-layout').innerText);
+            
+            if ((window.innerWidth / window.innerHeight > 1.2)) {
+                cssLayoutMap.get('.quiz-summary')
+            }
+        }
+
+    </script>
+</head>
+<body>
+<div class="quiz">
+<div class="quiz-title">Personal Preferences</div>
+<div class="quiz-arrange">
+<div class="quiz-summary">Score: <span class="quiz-score" data-value="0">0</span></div>
+<div class="questions">
+
+<div class="question-container" data-answered="false" data-value="0">
+    <div class="question">What is your favorite color?</div>
+    <div class="answer-container">
+        <div class="answer" data-value="1" onclick="selectAnswerExclusive(this)">Red</div>
+        <div class="answer" data-value="1" onclick="selectAnswerExclusive(this)">Blue</div>
+        <div class="answer" data-value="2" onclick="selectAnswerExclusive(this)">Green</div>
+        <div class="answer" data-value="3" onclick="selectAnswerExclusive(this)">Yellow</div>
+    </div>
+</div>
+
+<div class="question-container" data-answered="false" data-value="0">
+    <div class="question" data-limit="3">What are the 3 best shapes?</div>
+    <div class="answer-container" data-order-selected="">
+        <div class="answer" data-value="3" onclick="selectAnswerMultiple(this)">Triangle</div>
+        <div class="answer" data-value="4" onclick="selectAnswerMultiple(this)">Diamond</div>
+        <div class="answer" data-value="4" onclick="selectAnswerMultiple(this)">Square</div>
+        <div class="answer" data-value="5" onclick="selectAnswerMultiple(this)">Pentagon</div>
+        <div class="answer" data-value="6" onclick="selectAnswerMultiple(this)">Hexagon</div>
+        <div class="answer" data-value="9" onclick="selectAnswerMultiple(this)">Nonagon</div>
+    </div>
+</div>
+
+<div class="question-container" data-answered="false" data-value="0">
+    <div class="question">What range does your age fall in?</div>
+    <div class="answer-container">
+        <div class="answer" data-value="7" onclick="selectAnswerExclusive(this)">18-24</div>
+        <div class="answer" data-value="4" onclick="selectAnswerExclusive(this)">25-37</div>
+        <div class="answer" data-value="2" onclick="selectAnswerExclusive(this)">38-53</div>
+        <div class="answer" data-value="1" onclick="selectAnswerExclusive(this)">54+</div>
+    </div>
+</div>
+
+</div></div></div>
+
+<script>
+    function getFirstAncestorWithClass(element, className) {
+        while (element.parentElement) {
+            if (element.parentElement.classList.contains(className)) { break; }
+            element = element.parentElement;
+        }
+        return element.parentElement; // will return null if exhausting the tree yeilds no element with the requested class
+    }
+
+    function rollUpScore(element) {
+        let myScore = 0;
+        let selected = 0;
+        let answers = element.parentElement.children;
+        
+        for (let i = 0; i < answers.length; i++) {
+            if (answers[i].classList.contains('selected')) {
+                myScore += Number(answers[i].dataset.value);
+                selected += 1;
+            }
+        }
+        let questionContainer = getFirstAncestorWithClass(element, 'question-container');
+        let delta = myScore - Number(questionContainer.dataset.value)
+        questionContainer.dataset.value = myScore;
+        questionContainer.dataset.answered = selected > 0;
+
+        let quiz = getFirstAncestorWithClass(element, 'quiz');
+        let quizScore = quiz.getElementsByClassName('quiz-score')[0];
+
+        quizScore.dataset.value = Number(quizScore.dataset.value) + delta;
+        quizScore.innerText = quizScore.dataset.value;
+    }
+    function is_all_ws(nod) {
+        return !/[^\t\n\r ]/.test(nod.textContent);
+    }
+
+    function is_ignorable(nod) {
+        return (
+            nod.nodeType === 8 || // A comment node
+            (nod.nodeType === 3 && is_all_ws(nod))
+        ); // not a text node, all ws
+    }
+
+    function any_selected(classes) {
+        let ans = false;
+
+        for (cls in classes) {
+            ans = ans || cls == 'selected';
+        }
+        return ans;
+    }
+
+    function selectAnswerExclusive(element) {
+        // Remove 'selected' class from any previously selected answers
+        let answers = element.parentElement.children; //
+        //console.log(answers);
+        
+        for (let i = 0; i < answers.length; i++) {
+           //console.log(answers[i].classList);
+           answers[i].classList.remove('selected');
+        }
+        
+        // Add 'selected' class to the clicked answer
+        element.classList.add('selected');
+        //console.log(element.parentElement);
+        rollUpScore(element)
+    }
+
+    function selectAnswerMultiple(element) {
+        // Remove 'selected' class from any previously selected answers
+        element.classList.toggle('selected');
+        rollUpScore(element)
+    }
+
+    function selectAnswerToggle(element) {
+        // Remove 'selected' class from any previously selected answers
+        element.classList.toggle('selected');
+        rollUpScore(element)
+    }
+</script>
+
+</body>
+</html>

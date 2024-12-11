@@ -1,0 +1,12 @@
+style: questionnaire
+answer-set:
+  labels:
+    - never
+    - occasionally
+    - sometimes
+    - always
+  values:
+    - 1
+    - 2
+    - 3
+    - 4

@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+  <title>번아웃 자가 증상 체크</title>
+  <style>
+    body {
+      font-family: "Gowun Batang", Arial, sans-serif;
+      max-width: 1280px;
+      margin: 20px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    thead {
+        font-weight: bold;
+        text-align: center;
+    }
+    h2, h4 {
+      text-align: center;
+    }
+    h2 span {
+        font-size: 12px;
+    }
+    td label span {
+        font-weight: bold;
+    }
+    .question {
+      margin: 15px 0;
+    }
+    .result {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>번아웃 자가 증상 체크 <a href="https://www.re-mindpsychology.com/assessments/burnout_en"><span>English</span></a></h2>
+  <h4><a href="https://www.re-mindpsychology.com/assessments/phq9_en"><span>PHQ-9</span></a> / <a href="https://www.re-mindpsychology.com/assessments/gad7_en"><span>GAD-7</span></a></h4>
+  <form><div  id="questionnaire_1">
+    <table>
+        <thead>
+        <tr>
+        <td><p></p></td>
+        <td><p>전혀아님</p></td>
+        <td><p>거의아님</p></td>
+        <td><p>가끔</p></td>
+        <td><p>자주</p></td>
+        <td><p>매우자주</p></td>
+        </tr>
+        </thead>
+        <tbody> <tr class="question">
+                <td><label for="q1"><span>1.</span> 자주 피로감을 느낀다</label></td>
+                <td><input type="radio" name="q1" value="1"> 1</td>
+                <td><input type="radio" name="q1" value="2"> 2</td>
+                <td><input type="radio" name="q1" value="3"> 3</td>
+                <td><input type="radio" name="q1" value="4"> 4</td>
+                <td><input type="radio" name="q1" value="5"> 5</td>
+              </tr>
+        
+              <tr class="question">
+                <td><label for="q2"><span>2.</span> 학업과 외부 활동을 모두 마치고 나면 녹초가 된다</label></td>
+                <td><input type="radio" name="q2" value="1"> 1</td>
+                <td><input type="radio" name="q2" value="2"> 2</td>
+                <td><input type="radio" name="q2" value="3"> 3</td>
+                <td><input type="radio" name="q2" value="4"> 4</td>
+                <td><input type="radio" name="q2" value="5"> 5</td>
+              </tr>
+        
+              <tr class="question">
+                <td><label for="q3"><span>3.</span> 종종 피곤해 보인다는 이야기를 듣는다</label></td>
+                <td><input type="radio" name="q3" value="1"> 1</td>
+                <td><input type="radio" name="q3" value="2"> 2</td>
+                <td><input type="radio" name="q3" value="3"> 3</td>
+                <td><input type="radio" name="q3" value="4"> 4</td>
+                <td><input type="radio" name="q3" value="5"> 5</td>
+              </tr>
+        
+              <tr class="question">
+                <td><label for="q4"><span>4.</span> 현재 맡고 있는 일에 대한 흥미가 매우 감소하였다</label></td>
+                <td><input type="radio" name="q4" value="1"> 1</td>
+                <td><input type="radio" name="q4" value="2"> 2</td>
+                <td><input type="radio" name="q4" value="3"> 3</td>
+                <td><input type="radio" name="q4" value="4"> 4</td>
+                <td><input type="radio" name="q4" value="5"> 5</td>
+              </tr>
+        
+              <tr class="question">
+                <td><label for="q5"><span>5.</span> 나는 나의 능력에 대해 회의적이다</label></td>
+                <td><input type="radio" name="q5" value="1"> 1</td>
+                <td><input type="radio" name="q5" value="2"> 2</td>
+                <td><input type="radio" name="q5" value="3"> 3</td>
+                <td><input type="radio" name="q5" value="4"> 4</td>
+                <td><input type="radio" name="q5" value="5"> 5</td>
+              </tr>
+        
+              <tr class="question">
+                <td><label for="q6"><span>6.</span> 형언하기 어려운 슬픔을 경험한다</label></td>
+                <td><input type="radio" name="q6" value="1"> 1</td>
+                <td><input type="radio" name="q6" value="2"> 2</td>
+                <td><input type="radio" name="q6" value="3"> 3</td>
+                <td><input type="radio" name="q6" value="4"> 4</td>
+                <td><input type="radio" name="q6" value="5"> 5</td>
+              </tr>
+        
+              <tr class="question">
+                <td><label for="q7"><span>7.</span> 물건을 자주 잃어버린다</label></td>
+                <td><input type="radio" name="q7" value="1"> 1</td>
+                <td><input type="radio" name="q7" value="2"> 2</td>
+                <td><input type="radio" name="q7" value="3"> 3</td>
+                <td><input type="radio" name="q7" value="4"> 4</td>
+                <td><input type="radio" name="q7" value="5"> 5</td>
+              </tr>
+        
+              <tr class="question">
+                <td><label for="q8"><span>8.</span> 최근 들어 쉽게 짜증내고 불만이 많아지며 마음의 여유가 부족하다</label></td>
+                <td><input type="radio" name="q8" value="1"> 1</td>
+                <td><input type="radio" name="q8" value="2"> 2</td>
+                <td><input type="radio" name="q8" value="3"> 3</td>
+                <td><input type="radio" name="q8" value="4"> 4</td>
+                <td><input type="radio" name="q8" value="5"> 5</td>
+              </tr>
+        
+              <tr class="question">
+                <td><label for="q9"><span>9.</span> 이전에는 대수롭지 않게 넘어갔던 일에도 분노를 조절하기가 어려워진다</label></td>
+                <td><input type="radio" name="q9" value="1"> 1</td>
+                <td><input type="radio" name="q9" value="2"> 2</td>
+                <td><input type="radio" name="q9" value="3"> 3</td>
+                <td><input type="radio" name="q9" value="4"> 4</td>
+                <td><input type="radio" name="q9" value="5"> 5</td>
+              </tr>
+        
+              <tr class="question">
+                <td><label for="q10"><span>10.</span> 자주 주변 사람들에게 실망하게 된다</label></td>
+                <td><input type="radio" name="q10" value="1"> 1</td>
+                <td><input type="radio" name="q10" value="2"> 2</td>
+                <td><input type="radio" name="q10" value="3"> 3</td>
+                <td><input type="radio" name="q10" value="4"> 4</td>
+                <td><input type="radio" name="q10" value="5"> 5</td>
+              </tr>
+        
+              <tr class="question">
+                <td><label for="q11"><span>11.</span> 혼자서 보내는 시간이 이전보다 증가하였다</label></td>
+                <td><input type="radio" name="q11" value="1"> 1</td>
+                <td><input type="radio" name="q11" value="2"> 2</td>
+                <td><input type="radio" name="q11" value="3"> 3</td>
+                <td><input type="radio" name="q11" value="4"> 4</td>
+                <td><input type="radio" name="q11" value="5"> 5</td>
+              </tr>
+        
+              <tr class="question">
+                <td><label for="q12"><span>12.</span> 취미 활동을 하지 못한다</label></td>
+                <td><input type="radio" name="q12" value="1"> 1</td>
+                <td><input type="radio" name="q12" value="2"> 2</td>
+                <td><input type="radio" name="q12" value="3"> 3</td>
+                <td><input type="radio" name="q12" value="4"> 4</td>
+                <td><input type="radio" name="q12" value="5"> 5</td>
+              </tr>
+        
+              <tr class="question">
+                <td><label for="q13"><span>13.</span> 지속되는 피로감, 두통, 소화불량 증상이 증가하였다</label></td>
+                <td><input type="radio" name="q13" value="1"> 1</td>
+                <td><input type="radio" name="q13" value="2"> 2</td>
+                <td><input type="radio" name="q13" value="3"> 3</td>
+                <td><input type="radio" name="q13" value="4"> 4</td>
+                <td><input type="radio" name="q13" value="5"> 5</td>
+              </tr>
+        
+              <tr class="question">
+                <td><label for="q14"><span>14.</span> 업무를 진행하면서 마음의 부담과 스스로의 한계를 느낀다</label></td>
+                <td><input type="radio" name="q14" value="1"> 1</td>
+                <td><input type="radio" name="q14" value="2"> 2</td>
+                <td><input type="radio" name="q14" value="3"> 3</td>
+                <td><input type="radio" name="q14" value="4"> 4</td>
+                <td><input type="radio" name="q14" value="5"> 5</td>
+              </tr>
+        
+              <tr class="question">
+                <td><label for="q15"><span>15.</span> 모든 일에 대체로 하고자 하는 마음이 생기지 않는다</label></td>
+                <td><input type="radio" name="q15" value="1"> 1</td>
+                <td><input type="radio" name="q15" value="2"> 2</td>
+                <td><input type="radio" name="q15" value="3"> 3</td>
+                <td><input type="radio" name="q15" value="4"> 4</td>
+                <td><input type="radio" name="q15" value="5"> 5</td>
+              </tr>
+        
+              <tr class="question">
+                <td><label for="q16"><span>16.</span> 현저하게 유머 감각이 감소했다</label></td>
+                <td><input type="radio" name="q16" value="1"> 1</td>
+                <td><input type="radio" name="q16" value="2"> 2</td>
+                <td><input type="radio" name="q16" value="3"> 3</td>
+                <td><input type="radio" name="q16" value="4"> 4</td>
+                <td><input type="radio" name="q16" value="5"> 5</td>
+              </tr>
+        
+              <tr class="question">
+                <td><label for="q17"><span>17.</span> 성적 욕구가 줄어들었다</label></td>
+                <td><input type="radio" name="q17" value="1"> 1</td>
+                <td><input type="radio" name="q17" value="2"> 2</td>
+                <td><input type="radio" name="q17" value="3"> 3</td>
+                <td><input type="radio" name="q17" value="4"> 4</td>
+                <td><input type="radio" name="q17" value="5"> 5</td>
+              </tr>
+        
+              <tr class="question">
+                <td><label for="q18"><span>18.</span> 다른 사람들과 소통하는 것이 어렵다고 느낀다</label></td>
+                <td><input type="radio" name="q18" value="1"> 1</td>
+                <td><input type="radio" name="q18" value="2"> 2</td>
+                <td><input type="radio" name="q18" value="3"> 3</td>
+                <td><input type="radio" name="q18" value="4"> 4</td>
+                <td><input type="radio" name="q18" value="5"> 5</td>
+              </tr> </tbody>
+        </table>
+        <button type="button" onclick="calculateScore1()">Submit</button>
+  </div>
+
+  <div  id="questionnaire_2" style="visibility: collapse;">
+    <div class="result">
+        <h4 id="result_pt1"></h4>
+        <h4>65점 이상을 받았다면 현재 번아웃을 경험하고 있다는 뜻입니다. 그럼 이제 번아웃이 어느정도인지 자세히 살펴볼까요?</h4>
+    </div>
+    
+    <table>
+        <thead>
+    <tr>
+    <td><p></p></td>
+    <td><p>해당없음</p></td>
+    <td><p>이따금</p></td>
+    <td><p>빈번함</p></td>
+    </tr>
+    </thead>
+    <tbody>
+        <tr class="question">
+        <td><label for="p1"><span>1.</span> 아침에 일어나 출근할 생각을 하면 스트레스가 쌓이고 가슴이 답답해진다.</label></td>
+        <td><input type="radio" name="p1" value="0"> 0</td>
+        <td><input type="radio" name="p1" value="1"> 1</td>
+        <td><input type="radio" name="p1" value="2"> 2</td>
+        </tr>
+
+        <tr class="question">
+        <td><label for="p2"><span>2.</span> 업무 중 칭찬을 받아도 그리 유쾌한 감정이 느껴지지 않는다.</label></td>
+        <td><input type="radio" name="p2" value="0"> 0</td>
+        <td><input type="radio" name="p2" value="1"> 1</td>
+        <td><input type="radio" name="p2" value="2"> 2</td>
+        </tr>
+
+        <tr class="question">
+        <td><label for="p3"><span>3.</span> 업무 이외에 개인적인 일상이나 여유 시간이 부족하다.</label></td>
+        <td><input type="radio" name="p3" value="0"> 0</td>
+        <td><input type="radio" name="p3" value="1"> 1</td>
+        <td><input type="radio" name="p3" value="2"> 2</td>
+        </tr>
+
+        <tr class="question">
+        <td><label for="p4"><span>4.</span> 몸에 힘이 없고 약해진 것 같은 느낌이 든다.</label></td>
+        <td><input type="radio" name="p4" value="0"> 0</td>
+        <td><input type="radio" name="p4" value="1"> 1</td>
+        <td><input type="radio" name="p4" value="2"> 2</td>
+        </tr>
+
+        <tr class="question">
+        <td><label for="p5"><span>5.</span> 업무를 진행하는데 있어 마음 속 부담감과 스스로의 한계를 느낀다.</label></td>
+        <td><input type="radio" name="p5" value="0"> 0</td>
+        <td><input type="radio" name="p5" value="1"> 1</td>
+        <td><input type="radio" name="p5" value="2"> 2</td>
+        </tr>
+
+        <tr class="question">
+        <td><label for="p6"><span>6.</span> 충분히 수면을 취해도 지속적으로 피로감을 느낀다.</label></td>
+        <td><input type="radio" name="p6" value="0"> 0</td>
+        <td><input type="radio" name="p6" value="1"> 1</td>
+        <td><input type="radio" name="p6" value="2"> 2</td>
+        </tr>
+
+        <tr class="question">
+        <td><label for="p7"><span>7.</span> 이전에는 대수롭지 않게 여기던 일에도 분노를 조절하기가 어려워진다.</label></td>
+        <td><input type="radio" name="p7" value="0"> 0</td>
+        <td><input type="radio" name="p7" value="1"> 1</td>
+        <td><input type="radio" name="p7" value="2"> 2</td>
+        </tr>
+
+        <tr class="question">
+        <td><label for="p8"><span>8.</span> 혼자서 보내는 시간이 이전보다 더 길어졌다.</label></td>
+        <td><input type="radio" name="p8" value="0"> 0</td>
+        <td><input type="radio" name="p8" value="1"> 1</td>
+        <td><input type="radio" name="p8" value="2"> 2</td>
+        </tr>
+
+        <tr class="question">
+        <td><label for="p9"><span>9.</span> 현재 하고 있는 일에 대한 흥미가 상당히 감소하였다.</label></td>
+        <td><input type="radio" name="p9" value="0"> 0</td>
+        <td><input type="radio" name="p9" value="1"> 1</td>
+        <td><input type="radio" name="p9" value="2"> 2</td>
+        </tr>
+
+        <tr class="question">
+        <td><label for="p10"><span>10.</span> 가까운 이들에게서 자주 실망스러움을 느낀다.</label></td>
+        <td><input type="radio" name="p10" value="0"> 0</td>
+        <td><input type="radio" name="p10" value="1"> 1</td>
+        <td><input type="radio" name="p10" value="2"> 2</td>
+        </tr>
+
+        <tr class="question">
+        <td><label for="p11"><span>11.</span> 종종 주변 사람들에게 고민이 많아 보이거나 아파보인다는 이야기를 듣는다.</label></td>
+        <td><input type="radio" name="p11" value="0"> 0</td>
+        <td><input type="radio" name="p11" value="1"> 1</td>
+        <td><input type="radio" name="p11" value="2"> 2</td>
+        </tr>
+
+        <tr class="question">
+        <td><label for="p12"><span>12.</span> 성적 욕구가 줄어들었다.</label></td>
+        <td><input type="radio" name="p12" value="0"> 0</td>
+        <td><input type="radio" name="p12" value="1"> 1</td>
+        <td><input type="radio" name="p12" value="2"> 2</td>
+        </tr>
+
+        <tr class="question">
+        <td><label for="p13"><span>13.</span> 스스로 평가하기에 자신이 맡고 있는 직무에 대한 기여도는 낮은 편이라 생각한다.</label></td>
+        <td><input type="radio" name="p13" value="0"> 0</td>
+        <td><input type="radio" name="p13" value="1"> 1</td>
+        <td><input type="radio" name="p13" value="2"> 2</td>
+        </tr>
+
+        <tr class="question">
+        <td><label for="p14"><span>14.</span> 지속적인 피로감이나 감기, 두통, 허리 통증, 소화불량 같은 증상들이 이전보다 더 자주 나타난다.</label></td>
+        <td><input type="radio" name="p14" value="0"> 0</td>
+        <td><input type="radio" name="p14" value="1"> 1</td>
+        <td><input type="radio" name="p14" value="2"> 2</td>
+        </tr>
+
+        <tr class="question">
+        <td><label for="p15"><span>15.</span> 가까운 지인들과 소통하는 것이 어렵게 느껴진다.</label></td>
+        <td><input type="radio" name="p15" value="0"> 0</td>
+        <td><input type="radio" name="p15" value="1"> 1</td>
+        <td><input type="radio" name="p15" value="2"> 2</td>
+        </tr>
+        </tbody>
+    </table>
+    <button type="button" onclick="calculateScore2()">Submit</button>
+  </div>
+  </form>
+  <div class="result"><h4 id="result"></h4></div>
+  <div id="conclusion" style="visibility:collapse;"> 
+    <ul style="list-style-type:none;">
+        <li id="cut8" style="display:none;">8점 미만 : 탈진 상태의 초기 단계로 판단됩니다. 업무 외적으로 자신이 흥미를 느끼는 활동을 탐색하여, 지속적으로 기분 전환의 시간을 가져보시기 바랍니다. 마음 속 고민거리를 털어놓을 수 있는 친한 친구나 직장 동료, 혹은 아는 사람들과 이야기를 나누면서 쌓여있던 감정들을 표현하는 것도 큰 도움이 될 수 있습니다. 하지만, 스스로 이겨내기가 힘들다고 판단되신다면 전문가의 조언을 구해 보시기 바랍니다.</li>
+        <li id="cut14" style="display:none;">9점부터 14점 사이 : 심각한 수준의 번아웃 증상을 겪고 있을 것으로 보이며, 이로 인해 일상생활에 지장이 있을 것으로 예상됩니다. 가능하다면 전문가의 조언을 받아보시고 치료를 하시는 것을 추천 드립니다.</li>
+        <li id="cutinf"  style="display:none;">15점부터 30점 사이 : 굉장히 심각한 단계의 번아웃 증후군 상태임을 나타냅니다. 이런 경우 계속해서 심한 스트레스와 정신적인 피로가 쌓였을 가능성이 높습니다. 이제 더 이상 자신을 내버려 두지 마시고, 즉시 전문가의 도움을 받아보시는 것을 추천 드립니다.</li>
+      </ul> 
+    </div>
+
+  <script>
+    function calculateScore1() {
+      let totalScore = 0;
+      let unanswered = false;
+
+      // Loop through the 18 questions
+      for (let i = 1; i <= 18; i++) {
+        const radios = document.getElementsByName('q' + i);
+        let answered = false;
+
+        for (let j = 0; j < radios.length; j++) {
+          if (radios[j].checked) {
+            totalScore += parseInt(radios[j].value);
+            answered = true;
+            break;
+          }
+        }
+
+        if (!answered) {
+          unanswered = true;
+        }
+      }
+
+      if (unanswered) {
+        document.getElementById('result').textContent = "모든 질문에 답변해 주세요.";
+      } else if (totalScore < 65) {
+        document.getElementById('result').textContent = "";
+        document.getElementById('result_pt1').textContent = "총 점수는 다음과 같습니다: " + totalScore;
+      } else {
+        document.getElementById('questionnaire_1').style.visibility = "collapse"
+        document.getElementById('questionnaire_2').style.visibility = "visible"
+        document.getElementById('result_pt1').textContent = "총 점수는 다음과 같습니다: " + totalScore;
+      }
+    }
+    function calculateScore2() {
+      let totalScore = 0;
+      let unanswered = false;
+
+      // Loop through the 15 questions
+      for (let i = 1; i <= 15; i++) {
+        const radios = document.getElementsByName('p' + i);
+        let answered = false;
+
+        for (let j = 0; j < radios.length; j++) {
+          if (radios[j].checked) {
+            totalScore += parseInt(radios[j].value);
+            answered = true;
+            break;
+          }
+        }
+
+        if (!answered) {
+          unanswered = true;
+        }
+      }
+
+      if (unanswered) {
+        document.getElementById('result').textContent = "모든 질문에 답변해 주세요.";
+      } else {
+
+        document.getElementById('result').textContent = "총 점수는 다음과 같습니다: " + totalScore;
+        document.getElementById('conclusion').style.visibility = "visible";
+        if (totalScore <= 8) {
+            document.getElementById('cut14').style.display = "none"
+            document.getElementById('cutinf').style.display = "none"
+            document.getElementById('cut8').style.display = "list-item"
+        } else if (totalScore <= 14) {
+            document.getElementById('cut8').style.display = "none"
+            document.getElementById('cutinf').style.display = "none"
+            document.getElementById('cut14').style.display = "list-item"
+        } else {
+            document.getElementById('cut8').style.display = "none"
+            document.getElementById('cut14').style.display = "none"
+            document.getElementById('cutinf').style.display = "list-item"
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ordinal Questionnaire</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    h2 {
+      text-align: center;
+    }
+    .question {
+      margin: 15px 0;
+    }
+    .result {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Ordinal Questionnaire</h2>
+
+  <form id="questionnaire">
+    <div class="question">
+      <label for="q1">1. How satisfied are you with our service?</label><br>
+      <input type="radio" name="q1" value="1"> 1
+      <input type="radio" name="q1" value="2"> 2
+      <input type="radio" name="q1" value="3"> 3
+      <input type="radio" name="q1" value="4"> 4
+      <input type="radio" name="q1" value="5"> 5
+    </div>
+
+    <div class="question">
+      <label for="q2">2. How likely are you to recommend us to a friend?</label><br>
+      <input type="radio" name="q2" value="1"> 1
+      <input type="radio" name="q2" value="2"> 2
+      <input type="radio" name="q2" value="3"> 3
+      <input type="radio" name="q2" value="4"> 4
+      <input type="radio" name="q2" value="5"> 5
+    </div>
+
+    <div class="question">
+      <label for="q3">3. How well did we meet your expectations?</label><br>
+      <input type="radio" name="q3" value="1"> 1
+      <input type="radio" name="q3" value="2"> 2
+      <input type="radio" name="q3" value="3"> 3
+      <input type="radio" name="q3" value="4"> 4
+      <input type="radio" name="q3" value="5"> 5
+    </div>
+
+    <div class="question">
+      <label for="q4">4. How likely are you to return for future services?</label><br>
+      <input type="radio" name="q4" value="1"> 1
+      <input type="radio" name="q4" value="2"> 2
+      <input type="radio" name="q4" value="3"> 3
+      <input type="radio" name="q4" value="4"> 4
+      <input type="radio" name="q4" value="5"> 5
+    </div>
+
+    <div class="question">
+      <label for="q5">5. How would you rate the overall quality of service?</label><br>
+      <input type="radio" name="q5" value="1"> 1
+      <input type="radio" name="q5" value="2"> 2
+      <input type="radio" name="q5" value="3"> 3
+      <input type="radio" name="q5" value="4"> 4
+      <input type="radio" name="q5" value="5"> 5
+    </div>
+
+    <button type="button" onclick="calculateScore()">Submit</button>
+  </form>
+
+  <div class="result" id="result"></div>
+
+  <script>
+    function calculateScore() {
+      let totalScore = 0;
+      let unanswered = false;
+
+      // Loop through the 5 questions
+      for (let i = 1; i <= 5; i++) {
+        const radios = document.getElementsByName('q' + i);
+        let answered = false;
+
+        for (let j = 0; j < radios.length; j++) {
+          if (radios[j].checked) {
+            totalScore += parseInt(radios[j].value);
+            answered = true;
+            break;
+          }
+        }
+
+        if (!answered) {
+          unanswered = true;
+        }
+      }
+
+      if (unanswered) {
+        document.getElementById('result').textContent = "Please answer all questions.";
+      } else {
+        document.getElementById('result').textContent = "Your total score is: " + totalScore;
+      }
+    }
+  </script>
+
+</body>
+</html>
